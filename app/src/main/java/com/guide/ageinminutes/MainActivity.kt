@@ -2,6 +2,7 @@ package com.guide.ageinminutes
 
 import android.app.DatePickerDialog
 import android.os.Bundle
+import android.util.Log
 import android.view.View
 import android.widget.Button
 import android.widget.Toast
@@ -44,6 +45,8 @@ class MainActivity : AppCompatActivity() {
                     val currentDate = sdf.parse(sdf.format(System.currentTimeMillis()))
 
                     print("Yoooooooooo: $currentDate")
+
+                    Log.i("Hello", "$currentDate")
 
                     val currentDateInMinutes = currentDate!!.time / 60000
 
